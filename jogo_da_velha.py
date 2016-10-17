@@ -65,18 +65,34 @@ def jogadas_ia():
              if matriz [0][0] == ' ':
                  matriz[0][0] = "O"       
              
-    elif contador == 2:
+        elif contador == 2:
 
          if (matriz [0][0] == "X" and matriz [0][1] == "X"):
              if matriz [0][2] == ' ':
                 matriz[0][2] = "O"
+                
          elif (matriz [0][0] == "X" and matriz [0][2] == "X"):
              if matriz [0][1] == ' ':
                 matriz[0][1] = "O"
+                
          elif (matriz [0][1] == "X" and matriz [0][2] == "X"):
              if matriz [0][0] == ' ':
                 matriz[0][0] = "O"
-         
+                
+       elif contador == 3:
+            
+         if ( matriz[0][0] == "X" and matriz[1][0] == "X"):
+             if matriz [2][0]  == ' ':
+                 matriz[2][0] = "O"
+
+         elif ( matriz[2][1] == "X" and matriz[0][1] == "X"):
+             if matriz [2][0]  == ' ':
+                matriz[2][0] = "O"
+
+         elif ( matriz[2][2] == "X" and matriz[0][0] == "X"):
+             if matriz [2][2]  == ' ':
+                matriz[2][0] = "O"
+                
 #verifica se alguem ganhou
 def verificar_ganhador():
     
